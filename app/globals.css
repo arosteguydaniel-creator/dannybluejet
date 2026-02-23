@@ -1,153 +1,20 @@
-/* 🎨 Danny Blue Jet - Retrofuturistic Neon Styling */
-
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap');
-
-:root {
-  /* Neon Colors */
-  --neon-cyan: #00d9ff;
-  --neon-magenta: #ff006e;
-  --neon-purple: #b300ff;
-  --neon-blue: #0066ff;
-  --neon-green: #00ff00;
-  --neon-pink: #ff10f0;
-  --neon-orange: #ff5a00;
-  
-  /* Dark Background */
-  --bg-dark: #0a0e27;
-  --bg-darker: #050812;
-  --text-light: #e0e0ff;
-  --text-muted: #a0a0c0;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: var(--bg-dark);
-  color: var(--text-light);
-  font-family: 'Space Mono', monospace;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-/* ═══════════════════════════════════════════════════════ */
-/* TYPOGRAPHY */
-/* ═══════════════════════════════════════════════════════ */
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Orbitron', sans-serif;
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-h1 {
-  font-size: 3.5rem;
-  background: linear-gradient(135deg, var(--neon-cyan), var(--neon-magenta), var(--neon-purple));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow: 0 0 30px rgba(0, 217, 255, 0.5);
-  animation: neonGlow 3s ease-in-out infinite;
-  margin-bottom: 1rem;
-}
-
-h2 {
-  font-size: 2.5rem;
-  color: var(--neon-cyan);
-  text-shadow: 0 0 20px var(--neon-cyan), 0 0 40px var(--neon-magenta);
-  border-bottom: 3px solid var(--neon-magenta);
-  padding-bottom: 1rem;
-  margin-bottom: 2rem;
-}
-
-h3 {
-  font-size: 1.8rem;
-  color: var(--neon-purple);
-  text-shadow: 0 0 15px var(--neon-purple);
-}
-
-p {
-  color: var(--text-light);
-  font-size: 1rem;
-  letter-spacing: 1px;
-}
-
-a {
-  color: var(--neon-cyan);
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-a:hover {
-  text-shadow: 0 0 10px var(--neon-cyan);
-}
-
-/* ═══════════════════════════════════════════════════════ */
-/* ANIMATIONS */
-/* ═══════════════════════════════════════════════════════ */
-
-@keyframes neonGlow {
-  0%, 100% {
-    text-shadow: 0 0 10px rgba(0, 217, 255, 0.5), 0 0 20px rgba(255, 1, 110, 0.3);
-  }
-  50% {
-    text-shadow: 0 0 20px rgba(0, 217, 255, 0.8), 0 0 40px rgba(255, 1, 110, 0.6), 0 0 60px rgba(179, 0, 255, 0.4);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
-  }
-}
-
-@keyframes neonBorder {
-  0%, 100% {
-    box-shadow: 0 0 10px var(--neon-cyan), inset 0 0 10px rgba(0, 217, 255, 0.1);
-  }
-  50% {
-    box-shadow: 0 0 20px var(--neon-magenta), inset 0 0 20px rgba(255, 1, 110, 0.2);
-  }
-}
-
-@keyframes slideInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+:root{--bg:#070710;--panel:#0f0f1a;--neon-cyan:#00f0ff;--neon-magenta:#ff2dd3;--neon-purple:#8a2be2;--muted:#9aa0a6}
+*{box-sizing:border-box}html,body,#___next{height:100%}body{margin:0;font-family:Inter,system-ui,Arial;background:linear-gradient(180deg,var(--bg),#0b0b17 60%);color:#e9eef8}
+.container{max-width:1100px;margin:0 auto;padding:28px}
+.nav{position:fixed;top:0;left:0;right:0;z-index:5;background:rgba(255,255,255,0.02);backdrop-filter:blur(6px)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 24px}
+.brand{font-family:Orbitron, sans-serif;color:var(--neon-cyan);text-decoration:none}
+.hero{min-height:60vh;display:flex;align-items:center;justify-content:center;padding:60px 20px;text-align:center}
+.hero-title{font-family:Orbitron;font-size:3rem;color:var(--neon-magenta);text-shadow:0 0 12px rgba(255,45,211,0.35)}
+.btn{padding:10px 16px;border-radius:8px;text-decoration:none}
+.btn-primary{background:linear-gradient(90deg,var(--neon-cyan),var(--neon-magenta));color:#030312}
+.section-title{font-family:Orbitron;color:var(--neon-purple);margin-bottom:12px}
+.grid{display:grid;gap:18px}
+.products-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:rgba(255,255,255,0.02);border-radius:12px;padding:14px}
+.product-image{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:10px}
+.price{font-weight:700;color:var(--neon-cyan)}
+.music-player{display:flex;gap:18px;align-items:center}
+.cover{width:140px;height:140px;object-fit:cover}
+.footer{padding:24px;text-align:center;color:var(--muted)}
